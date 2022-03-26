@@ -1,0 +1,21 @@
+.type-one--navbar{
+    background-color: var(--red);
+    border-radius: 0;
+}
+
+.top-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-nav>p{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.top-nav>p:hover{
+    color: var( --other-secondary);
+    cursor: pointer;
+    transition: all 0.5s;
+}
