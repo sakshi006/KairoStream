@@ -10,3 +10,15 @@
     color: var(--primary);
     font-size: large;
 }
+
+.card .watch-later{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+}
+
+.card .watch-later:hover{
+    color: var(--primary);
+}
