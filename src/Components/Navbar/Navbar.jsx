@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
       <div className="hide">
         <div className="top-links">
-          <Link to="/gallery">
+          <Link to="/playlist">
             <button className="btn">Playlist</button>
           </Link>
           <Link to="/history">
