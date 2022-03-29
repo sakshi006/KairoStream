@@ -1,21 +1,39 @@
 .type-one--navbar{
-    background-color: var(--red);
+    background-color: var(--secondary);
     border-radius: 0;
+    border: none;
 }
 
 .top-nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.6rem;
 }
 
-.top-nav>p{
+.site-name{
     font-weight: bold;
-    font-size: 24px;
+    font-size: 26px;
+    letter-spacing: 0.2rem;
+    margin-left: 0.5rem;
+    line-height: 1.5rem;
+    color: var(--primary);
 }
 
-.top-nav>p:hover{
-    color: var( --other-secondary);
+.site-name:hover{
+    color: var( --font);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.hide .btn{
+    font-weight: bold;
+    margin: 0.2rem;
+}
+
+.hide .btn:hover{
+    background-color: var( --secondary);
+    color: var(--primary);
     cursor: pointer;
     transition: all 0.5s;
 }
