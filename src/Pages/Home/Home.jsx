@@ -1,10 +1,13 @@
 import React from 'react'
-import VideoCard from '../../Components/VideoCard/VideoCard'
+import "./Home.css"
+import Filterbar from '../../Components/Filtersbar/Filterbar'
+import Videolisting from '../VideoListing/Videolisting'
 
 const Home = () => {
   return (
-    <div>
-        <VideoCard/>
+    <div className='vid-home-page'>
+        <Filterbar/>
+         <Videolisting/>
     </div>
   )
 }

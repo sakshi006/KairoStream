@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="type-one--navbar">
-      <div className="top-nav">
+      <div className="top-nav" style={{ margin:"0%"}}>
        <Link to="/">
        <img
           src="https://cdn.dribbble.com/users/22136/screenshots/10873421/media/cec33efe113c8f7b0b999c682fe174fd.jpg?compress=1&resize=400x300&vertical=top"

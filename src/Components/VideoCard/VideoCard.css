@@ -1,0 +1,12 @@
+.card{
+    background-color: var(--secondary);
+}
+
+.card-image-one{
+    object-fit: cover;
+}
+
+.card ul .fas{
+    color: var(--primary);
+    font-size: large;
+}
