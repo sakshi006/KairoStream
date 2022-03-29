@@ -19,3 +19,15 @@
     cursor: pointer;
     transition: all 0.5s;
 }
+.hide .btn{
+    font-weight: bold;
+    margin: 0.2rem;
+}
+
+.hide .btn:hover{
+    background-color: var( --font);
+    color: var(--other-secondary);
+    cursor: pointer;
+    transition: all 0.5s;
+    
+}
