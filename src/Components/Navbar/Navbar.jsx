@@ -23,14 +23,21 @@ const Navbar = () => {
       <div className="hide">
         <div className="top-links">
           <Link to="/gallery">
-            <button className="btn">Gallery</button>
+            <button className="btn">Playlist</button>
+          </Link>
+          <Link to="/history">
+            <button className="btn">History</button>
+          </Link>
+          <Link to="/liked">
+            <button className="btn">Liked Videos</button>
+          </Link>
+          <Link to="/watchlater">
+            <button className="btn">Watch Later</button>
           </Link>
           <Link to="/login">
             <button className="btn">Login</button>
           </Link>
-          <Link to="/signup">
-            <button className="btn">SignUp</button>
-          </Link>
+         
         </div>
       </div>
     </div>
