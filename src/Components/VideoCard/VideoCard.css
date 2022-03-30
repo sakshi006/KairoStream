@@ -34,3 +34,20 @@
 .card article:hover{
     background-color: var(--secondary);
 }
+
+.text-over-video{
+    position: relative;
+    cursor: pointer;
+}
+
+.play-btn{
+    position: absolute;
+    left: 112px;
+    top: 78px;
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.card-image-one:hover{
+    opacity: 0.8;
+}
