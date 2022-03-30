@@ -1,9 +1,12 @@
 .card{
     background-color: var(--secondary);
+    height: 360px;
+    position: relative;
 }
 
 .card-image-one{
     object-fit: cover;
+    height: 180px;
 }
 
 .card ul .fas{
@@ -21,4 +24,30 @@
 
 .card .watch-later:hover{
     color: var(--primary);
+}
+
+.card footer{
+    position: absolute;
+    top: 20rem;
+}
+
+.card article:hover{
+    background-color: var(--secondary);
+}
+
+.text-over-video{
+    position: relative;
+    cursor: pointer;
+}
+
+.play-btn{
+    position: absolute;
+    left: 112px;
+    top: 78px;
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.card-image-one:hover{
+    opacity: 0.8;
 }
