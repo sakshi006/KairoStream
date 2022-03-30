@@ -34,7 +34,7 @@ const VideoCard = ({item}) => {
             Watch Later <BsFillClockFill style={{ marginLeft: "0.5rem" }} />
           </span>
           <ul>
-            {findItemInLike?<i style={{color:"red"}} onClick={()=>(token?addToLikes(item):navigate("/login"))} className="fas fa-heart"></i>: <i onClick={()=>addToLikes(item)} className="fas fa-heart"></i>}
+            {findItemInLike?<i style={{color:"red"}} onClick={()=>(token?addToLikes(item):navigate('/login'))} className="fas fa-heart"></i>: <i onClick={()=>(token?addToLikes(item):navigate('/login'))}  className="fas fa-heart"></i>}
             
           </ul>
         </footer>
