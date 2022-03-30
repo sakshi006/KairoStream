@@ -2,8 +2,17 @@ import React from "react";
 import "./VideoCard.css";
 import { BsFillClockFill } from "react-icons/bs";
 import { AiOutlinePlayCircle } from "react-icons/ai";
+import { useLike } from "../../context/likedVideoContext";
+import { useNavigate } from "react-router-dom";
 
 const VideoCard = ({item}) => {
+
+  const token = localStorage.getItem("token")
+  const navigate = useNavigate();
+  const {likeState,addToLikes} = useLike();
+
+  const findItemInLike = likeState.likes.find(product => product._id===item._id)
+
   return (
     <div className="cardcom background">
       <div className="card">
@@ -25,7 +34,8 @@ const VideoCard = ({item}) => {
             Watch Later <BsFillClockFill style={{ marginLeft: "0.5rem" }} />
           </span>
           <ul>
-            <i className="fas fa-heart"></i>
+            {findItemInLike?<i style={{color:"red"}} onClick={()=>(token?addToLikes(item):navigate("/login"))} className="fas fa-heart"></i>: <i onClick={()=>addToLikes(item)} className="fas fa-heart"></i>}
+            
           </ul>
         </footer>
       </div>

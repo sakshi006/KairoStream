@@ -7,6 +7,7 @@ import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
 import { VideoContextProvider } from "./context/videoContext";
 import { VideoFilterContextProvider } from "./context/videoFilterContext";
+import { LikeProvider } from "./context/likedVideoContext";
 
 // Call make Server
 makeServer();
@@ -16,7 +17,9 @@ ReactDOM.render(
   <BrowserRouter>
       <VideoContextProvider>
         <VideoFilterContextProvider>
+          <LikeProvider>
           <App />
+          </LikeProvider>
         </VideoFilterContextProvider>
       </VideoContextProvider>
     </BrowserRouter>
