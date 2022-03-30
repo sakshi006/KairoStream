@@ -1,9 +1,12 @@
 .card{
     background-color: var(--secondary);
+    height: 360px;
+    position: relative;
 }
 
 .card-image-one{
     object-fit: cover;
+    height: 180px;
 }
 
 .card ul .fas{
@@ -21,4 +24,13 @@
 
 .card .watch-later:hover{
     color: var(--primary);
+}
+
+.card footer{
+    position: absolute;
+    top: 20rem;
+}
+
+.card article:hover{
+    background-color: var(--secondary);
 }
