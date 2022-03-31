@@ -1,0 +1,14 @@
+.single-video{
+    display: block;
+    margin: 2rem auto;
+    max-width: 90%;
+    background-color: var(--secondary);
+    padding: 2rem;
+}
+
+.single-video footer{
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

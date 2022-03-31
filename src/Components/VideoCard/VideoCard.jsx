@@ -3,7 +3,7 @@ import "./VideoCard.css";
 import { BsFillClockFill } from "react-icons/bs";
 import { AiOutlinePlayCircle } from "react-icons/ai";
 import { useLike } from "../../context/likedVideoContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useWatchLater } from "../../context/watchLaterContext";
 
 const VideoCard = ({ item }) => {
@@ -23,7 +23,7 @@ const VideoCard = ({ item }) => {
     <div className="cardcom background">
       <div className="card">
         <div className="text-over-video">
-          <AiOutlinePlayCircle className="play-btn" />
+          <Link to ={`/video/${item._id}`}><AiOutlinePlayCircle className="play-btn" /></Link>
           <img className="card-image-one" src={item.thumbnail} alt="card" />
         </div>
         <article className="card-text-one">
