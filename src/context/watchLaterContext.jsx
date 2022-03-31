@@ -76,6 +76,7 @@ const WatchLaterProvider = ({ children }) => {
 
   useEffect(() => {
     getWatchLaterData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
