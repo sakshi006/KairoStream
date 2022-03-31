@@ -39,7 +39,7 @@ const VideoCard = ({ item }) => {
                   token ? addToWatchLater(item) : navigate("/login")
                 }
               >
-                <strong >Remove</strong>
+                <strong >Remove Video</strong>
                 <BsFillClockFill style={{ marginLeft: "0.5rem" }} />
               </div>
             ) : (
