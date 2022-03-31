@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 import "./Auth.css"
 
-const Signup = () => {
+export const Signup = () => {
 
   const navigate = useNavigate()
   const [credentials,setCredentials]  = useState({
@@ -86,5 +86,3 @@ const logInUser=async(e)=>{
 </div>
   )
 }
-
-export default Signup

@@ -3,7 +3,7 @@ import "./Home.css"
 import Filterbar from '../../Components/Filtersbar/Filterbar'
 import Videolisting from '../VideoListing/Videolisting'
 
-const Home = () => {
+export const Home = () => {
   return (
     <div className='vid-home-page'>
         <Filterbar/>
@@ -11,5 +11,3 @@ const Home = () => {
     </div>
   )
 }
-
-export default Home

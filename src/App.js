@@ -2,13 +2,8 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 
 import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home/Home";
 import Mockman from "mockman-js";
-import { Login } from "./Pages/Authentication/Login";
-import Signup from "./Pages/Authentication/Signup";
-import NotFound from "./Pages/NotFound";
-import LikedVideo from "./Pages/LikedVideos/LikedVideo";
-import WatchLater from "./Pages/WatchLater/WatchLater";
+import {Home, Login, Signup, NotFound, LikedVideo, WatchLater } from "./Pages";
 
 function App() {
   return (

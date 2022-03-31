@@ -2,7 +2,7 @@ import React from 'react'
 import VideoCard from '../../Components/VideoCard/VideoCard';
 import { useWatchLater } from '../../context/watchLaterContext';
 
-const WatchLater = () => {
+export const WatchLater = () => {
     const { watchLater } = useWatchLater();
 
   return (
@@ -23,5 +23,3 @@ const WatchLater = () => {
   );
   
 }
-
-export default WatchLater

@@ -3,7 +3,7 @@ import "./LikedVideo.css";
 import VideoCard from "../../Components/VideoCard/VideoCard";
 import { useLike } from "../../context/likedVideoContext";
 
-const LikedVideo = () => {
+export const LikedVideo = () => {
   const { likeState } = useLike();
   return (
     <>
@@ -24,4 +24,3 @@ const LikedVideo = () => {
   );
 };
 
-export default LikedVideo;
