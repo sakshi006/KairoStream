@@ -28,18 +28,46 @@ const Navbar = () => {
       </div>
       <div className="hide">
         <div className="top-links">
-          <Link to="/playlist">
-            <button className="btn">Playlist</button>
-          </Link>
-          <Link to="/history">
-            <button className="btn">History</button>
-          </Link>
-          <Link to="/liked">
-            <button className="btn">Liked Videos</button>
-          </Link>
-          <Link to="/watchlater">
-            <button className="btn">Watch Later</button>
-          </Link>
+          {!token ? (
+            <Link to="/login">
+              <button className="btn">Playlist</button>
+            </Link>
+          ) : (
+            <Link to="/playlist">
+              <button className="btn">Playlist</button>
+            </Link>
+          )}
+
+          {!token ? (
+            <Link to="/login">
+              <button className="btn">History</button>
+            </Link>
+          ) : (
+            <Link to="/history">
+              <button className="btn">History</button>
+            </Link>
+          )}
+
+          {!token ? (
+            <Link to="/login">
+              <button className="btn">Liked Videos</button>
+            </Link>
+          ) : (
+            <Link to="/liked">
+              <button className="btn">Liked Videos</button>
+            </Link>
+          )}
+
+          {!token ? (
+            <Link to="/login">
+              <button className="btn">Watch Later</button>
+            </Link>
+          ) : (
+            <Link to="/watchlater">
+              <button className="btn">Watch Later</button>
+            </Link>
+          )}
+
           {!token ? (
             <>
               <Link to="/login">
