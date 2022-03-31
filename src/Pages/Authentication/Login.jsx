@@ -29,10 +29,9 @@ export const Login = () => {
     await axios
       .post("/api/auth/login", {
         email: credentials.email,
-        password: credentials.password,
+        password: credentials.pass,
       })
       .then((res) => {
-        console.log(res);
         localStorage.setItem("token", res.data.encodedToken);
         navigate("/");
       })

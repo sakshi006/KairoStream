@@ -12,7 +12,7 @@ const Navbar = () => {
   };
   return (
     <div className="type-one--navbar">
-      <div className="top-nav" style={{ margin:"0%"}}>
+      <div className="top-nav" style={{ margin: "0%" }}>
         <Link to="/">
           <img
             src="https://cdn.dribbble.com/users/22136/screenshots/10873421/media/cec33efe113c8f7b0b999c682fe174fd.jpg?compress=1&resize=400x300&vertical=top"
@@ -20,7 +20,7 @@ const Navbar = () => {
             className="company-logo"
           />
         </Link>
-        <Link to="/" style={{textDecoration:"none"}}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <p className="site-name">Kairo Stream</p>
         </Link>
 
@@ -42,16 +42,20 @@ const Navbar = () => {
           </Link>
           {!token ? (
             <>
-            <Link to="/login">
-              <button className="btn">Login</button>
-            </Link>
-             <Link to="/signup">
-             <button className="btn">Signup</button>
-           </Link></>
+              <Link to="/login">
+                <button className="btn">Login</button>
+              </Link>
+              <Link to="/signup">
+                <button className="btn">Signup</button>
+              </Link>
+            </>
           ) : (
-           <Link to="/"> <button onClick={LogUserOut} className="btn">LogOut</button></Link>
+            <Link to="/">
+              <button onClick={LogUserOut} className="btn">
+                LogOut
+              </button>
+            </Link>
           )}
-         
         </div>
       </div>
     </div>
