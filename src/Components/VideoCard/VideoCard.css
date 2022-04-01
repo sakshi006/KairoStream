@@ -54,4 +54,25 @@
 
 .toggle-watch-later{
     color: var(--blue-text);
+    cursor: pointer;
+}
+
+.watch-later{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.liked-vide-div{
+    cursor: pointer;
+    color: var(--fav);
+}
+
+.remove-liked-video{
+    cursor: pointer;
+}
+
+.single-video-link{
+    text-decoration: none;
+    color: var(--font);
 }

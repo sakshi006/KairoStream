@@ -3,7 +3,7 @@ import "./VideoCard.css";
 import { BsFillClockFill } from "react-icons/bs";
 import { AiOutlinePlayCircle } from "react-icons/ai";
 import { useLike } from "../../context/likedVideoContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useWatchLater } from "../../context/watchLaterContext";
 
 const VideoCard = ({ item }) => {
@@ -22,24 +22,30 @@ const VideoCard = ({ item }) => {
   return (
     <div className="cardcom background">
       <div className="card">
-        <div className="text-over-video">
-          <AiOutlinePlayCircle className="play-btn" />
-          <img className="card-image-one" src={item.thumbnail} alt="card" />
-        </div>
-        <article className="card-text-one">
-          <figcaption>{item.title}</figcaption>
-          <h5>{item.creator}</h5>
-          <summary>Published on : {item.published}</summary>
-        </article>
+        <Link className="single-video-link" to={`/video/${item._id}`}>
+          <div className="text-over-video">
+            <AiOutlinePlayCircle className="play-btn" />
+
+            <img className="card-image-one" src={item.thumbnail} alt="card" />
+          </div>
+        </Link>
+        <Link className="single-video-link" to={`/video/${item._id}`}>
+          <article className="card-text-one">
+            <figcaption>{item.title}</figcaption>
+            <h5>{item.creator}</h5>
+            <summary>Published on : {item.published}</summary>
+          </article>
+        </Link>
         <footer>
           <span className="watch-later">
             {findItemInWatchLater ? (
-              <div className="toggle-watch-later"
+              <div
+                className="toggle-watch-later"
                 onClick={() =>
                   token ? addToWatchLater(item) : navigate("/login")
                 }
               >
-                <strong >Remove Video</strong>
+                <strong>Remove Video</strong>
                 <BsFillClockFill style={{ marginLeft: "0.5rem" }} />
               </div>
             ) : (
@@ -48,7 +54,8 @@ const VideoCard = ({ item }) => {
                   token ? addToWatchLater(item) : navigate("/login")
                 }
               >
-                <strong >Watch Later</strong> <BsFillClockFill style={{ marginLeft: "0.5rem" }} />
+                <strong>Watch Later</strong>{" "}
+                <BsFillClockFill style={{ marginLeft: "0.5rem" }} />
               </div>
             )}
           </span>

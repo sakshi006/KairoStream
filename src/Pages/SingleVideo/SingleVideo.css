@@ -1,0 +1,30 @@
+.single-video{
+    display: block;
+    margin: 2rem auto;
+    max-width: 90%;
+    background-color: var(--secondary);
+    padding: 2rem;
+    border: 1px solid var(--primary);
+    
+    box-shadow: 1px 1px 18px 1px var(--other);
+}
+
+.single-video footer{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link{
+    text-decoration: none;
+    font-size: large;
+    color: var(--primary);
+    font-weight: bold;
+    display: flex;    align-items: center;
+    transition: all 0.3s;
+}
+
+.back-link:hover{
+   color: var(--other);
+}
