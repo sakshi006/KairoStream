@@ -1,0 +1,35 @@
+.remove-from-history{
+    width: 90%;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 0.2rem;
+    background-color: var(--secondary);
+    transition: all 0.3s;
+    border-bottom: 1px solid var(--primary) ;
+}
+
+.remove-from-history:hover{
+    background-color: var(--primary);
+}
+
+.history-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top:20rem
+}
+
+.history-card{
+    position: relative;
+}
+
+.clear-all{
+    margin: auto;
+    text-align: center;
+    display: block;
+    max-width: 70%;
+}
