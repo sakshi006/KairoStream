@@ -1,6 +1,7 @@
 import React from "react";
 import { BsFillClockFill } from "react-icons/bs";
-import { useParams, useNavigate } from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import Iframe from "react-iframe-click";
 import { useVideoContext } from "../../context/videoContext";
 import "./SingleVideo.css";
@@ -26,6 +27,7 @@ const SingleVideo = () => {
 
   return (
     <div className="single-video">
+      <Link className="back-link" to="/"><BiArrowBack style={{marginRight:"0.3rem"}}/>Back To Browse</Link>
       <Iframe
         frameBorder="0"
         width="100%"
@@ -45,38 +47,38 @@ const SingleVideo = () => {
               <BsFillClockFill style={{ marginLeft: "0.5rem" }} />
             </div>
           ) : (
-            <div
+            <div  className="watch-later"
               onClick={() =>
                 token ? addToWatchLater(findVideo) : navigate("/login")
               }
             >
-              <strong>Watch Later</strong>{" "}
+              <strong>Watch Later</strong>
               <BsFillClockFill style={{ marginLeft: "0.5rem" }} />
             </div>
           )}
         </span>
         <ul>
           {findItemInLike ? (
-            <>
+            <div className="liked-vide-div"  onClick={() =>
+              token ? addToLikes(findVideo) : navigate("/login")
+            }>
            <strong> Remove From Liked Videos</strong>
               <i
                 style={{ color: "red" }}
-                onClick={() =>
-                  token ? addToLikes(findVideo) : navigate("/login")
-                }
+              
                 className="fas fa-heart"
               ></i>
-            </>
+            </div>
           ) : (
-              <>
+              <div className="remove-liked-video"  onClick={() =>
+                token ? addToLikes(findVideo) : navigate("/login")
+              } >
              <strong> Add To Liked Videos</strong>
               <i
-              onClick={() =>
-                token ? addToLikes(findVideo) : navigate("/login")
-              }
+             
               className="fas fa-heart"
             ></i>
-              </>
+              </div>
             
           )}
         </ul>
