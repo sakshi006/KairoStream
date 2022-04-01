@@ -10,7 +10,6 @@ const SingleVideo = () => {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
 
-  // context imports 
   const { video } = useVideoContext();
   const { videoID } = useParams();
   const { likeState, addToLikes } = useLike();
