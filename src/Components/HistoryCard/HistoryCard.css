@@ -3,11 +3,10 @@
     padding: 0.5rem;
     cursor: pointer;
     font-weight: bold;
-    border: 0px;
     border-radius: 0.2rem;
     background-color: var(--secondary);
     transition: all 0.3s;
-    border-bottom: 1px solid var(--primary) ;
+    box-shadow: 0.5px 0.1px 0.5px 0.1px ;
 }
 
 .remove-from-history:hover{

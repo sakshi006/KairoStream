@@ -8,7 +8,7 @@ export const History = () => {
   return (
     <>
       <div className="header-info">
-        <h3>History ( {historyState.history.length} Videos )</h3>
+        <h3>History Videos</h3>  {historyState.history.length ===1? <h5>1 Video</h5> :<h5>{historyState.history.length} Videos</h5>} 
       </div>
       <div className="liked-video-page">
         {historyState.history.length < 1 ? (
