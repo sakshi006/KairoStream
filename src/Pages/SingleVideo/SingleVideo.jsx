@@ -3,19 +3,20 @@ import { BsFillClockFill } from "react-icons/bs";
 import { BiArrowBack } from "react-icons/bi";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import Iframe from "react-iframe-click";
-import { useVideoContext } from "../../context/videoContext";
 import "./SingleVideo.css";
-import { useWatchLater } from "../../context/watchLaterContext";
-import { useLike } from "../../context/likedVideoContext";
+import {useVideoContext,useWatchLater,useLike,useHistory} from "../../context"
 
 const SingleVideo = () => {
-  const { videoID } = useParams();
-  const { video } = useVideoContext();
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
+
+  const { video } = useVideoContext();
+  const { videoID } = useParams();
   const { likeState, addToLikes } = useLike();
   const { watchLater, addToWatchLater } = useWatchLater();
+  const { addToHistory } = useHistory();
 
+  const findVideo = video.find((item) => item._id === videoID);
   const findItemInLike = likeState.likes.find(
     (product) => product._id === videoID
   );
@@ -23,7 +24,6 @@ const SingleVideo = () => {
     (product) => product._id === videoID
   );
 
-  const findVideo = video.find((item) => item._id === videoID);
 
   return (
     <div className="single-video">
@@ -33,6 +33,7 @@ const SingleVideo = () => {
         width="100%"
         height="540rem"
         src={`https://www.youtube.com/embed/${findVideo._id}`}
+        onInferredClick={() => (token && addToHistory(findVideo))}
       ></Iframe>
       <footer>
         <span className="watch-later">

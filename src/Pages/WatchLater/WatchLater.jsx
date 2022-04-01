@@ -8,7 +8,7 @@ export const WatchLater = () => {
   return (
     <div className="liked-video-page">
       <div className="header-info">
-        <h3>( {watchLater.watchLaterArray.length} Videos in Watch Later )</h3>
+      <h3>WatchLater Videos</h3>  {watchLater.watchLaterArray.length ===1? <h5>1 Video</h5> :<h5>{watchLater.watchLaterArray.length} Videos</h5>} 
       </div>
      
       {watchLater.watchLaterArray.length < 1  && (

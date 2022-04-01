@@ -8,7 +8,7 @@ export const LikedVideo = () => {
   return (
     <>
       <div className="header-info">
-        <h3>Liked Videos ( {likeState.likes.length} Videos )</h3>
+      <h3>Liked Videos</h3>  {likeState.likes.length ===1? <h5>1 Video</h5> :<h5>{likeState.likes.length} Videos</h5>} 
       </div>
       <div className="liked-video-page">
         {likeState.likes.length < 1 && !likeState.loading && (

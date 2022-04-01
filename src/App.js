@@ -3,7 +3,15 @@ import Navbar from "./Components/Navbar/Navbar";
 
 import { Route, Routes } from "react-router-dom";
 import Mockman from "mockman-js";
-import {Home, Login, Signup, NotFound, LikedVideo, WatchLater } from "./Pages";
+import {
+  Home,
+  Login,
+  Signup,
+  NotFound,
+  LikedVideo,
+  WatchLater,
+  History,
+} from "./Pages";
 import SingleVideo from "./Pages/SingleVideo/SingleVideo";
 
 function App() {
@@ -16,8 +24,9 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/liked" element={<LikedVideo />} />
         <Route path="/watchlater" element={<WatchLater />} />
+        <Route path="/history" element={<History />} />
         <Route path="*" element={<NotFound />} />
-        <Route path = "/video/:videoID" element={<SingleVideo/>}/>
+        <Route path="/video/:videoID" element={<SingleVideo />} />
         <Route path="mockman" element={<Mockman />} />
       </Routes>
     </div>
