@@ -10,9 +10,9 @@ const playlistReducer = (state, action) => {
     case "API_REQUEST":
       return { ...state, loading: true };
     case "ADD_TO_PLAYLIST":
-      return { ...state, playlist: [...state.playlist, action.payload] };
+      return { ...state, playlist: [...action.payload], loading:false };
     default:
-      return { ...state };
+      return state ;
   }
 };
 
@@ -81,7 +81,7 @@ const PlaylistProvider = ({ children }) => {
 
   const videoToPlayList = async (video, playlist) => {
     dispatchPlaylist({ type: "API_REQUEST" });
-    console.log(playlist.videos,"IN FUNC")
+   
     const currentIndex = playlist.videos.findIndex(
       (item) => item._id === video._id
     );

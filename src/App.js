@@ -14,6 +14,7 @@ import {
   Playlist,
 } from "./Pages";
 import SingleVideo from "./Pages/SingleVideo/SingleVideo";
+import { SinglePlaylist } from "./Pages/SinglePlaylist/SinglePlaylist";
 
 function App() {
   return (
@@ -30,6 +31,11 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/video/:videoID" element={<SingleVideo />} />
         <Route path="mockman" element={<Mockman />} />
+        <Route
+            path="playlist/:playlistID"
+            exact
+            element={<SinglePlaylist />}
+          />
       </Routes>
     </div>
   );

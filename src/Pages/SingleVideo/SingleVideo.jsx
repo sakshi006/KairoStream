@@ -111,7 +111,7 @@ const SingleVideo = () => {
           <BsFileEarmarkPlus onClick={()=>setModalVisible(!modalVisible)} /> 
 
           {modalVisible&&(
-            <div className="playlist__view">
+            <div className="playlist-view">
             {playlistState.playlist.map((item) => {
               const findPlaylist = playlistState.playlist.find(
                 (play) => play._id === item._id
@@ -134,13 +134,13 @@ const SingleVideo = () => {
             })}
 
             <p
-              className="empty--playlist"
+              className="empty-playlist"
               onClick={() => {
                 setPLaylistTitle("");
                 setOpen(!open);
               }}
             >
-              <i className="fa-solid fa-circle-plus"></i>
+             
               Add playlist
             </p>
           </div>

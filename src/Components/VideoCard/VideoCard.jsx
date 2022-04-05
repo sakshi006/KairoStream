@@ -2,9 +2,8 @@ import React from "react";
 import "./VideoCard.css";
 import { BsFillClockFill } from "react-icons/bs";
 import { AiOutlinePlayCircle } from "react-icons/ai";
-import { useLike } from "../../context/likedVideoContext";
+import { useLike,useWatchLater } from "../../context";
 import { useNavigate, Link } from "react-router-dom";
-import { useWatchLater } from "../../context/watchLaterContext";
 
 const VideoCard = ({ item }) => {
   const token = localStorage.getItem("token");

@@ -23,3 +23,18 @@
 body {
   font-family: "Zen Kaku Gothic Antique", sans-serif;
 }
+
+.react-responsive-modal-modal{
+ color: var(--other);
+}
+
+.modal__input{
+  padding: 0.3rem;
+  margin: 0.2rem;
+}
+
+.modal__button{
+  padding: 0.28rem;
+  color: var(--secondary);
+  color: var(--other);
+}
