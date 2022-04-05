@@ -40,7 +40,7 @@ const SingleVideo = () => {
 
   const findVideo = allVideos.find((item) => item._id === videoID);
   const findItemInLike = likeState.likes.find(
-    (product) => console.log(product,"product") || product._id === videoID
+    (product) => product._id === videoID
   );
 
 
@@ -59,6 +59,7 @@ const SingleVideo = () => {
         Back To Browse
       </Link>
       <Iframe
+      id="iframe"
         frameBorder="0"
         width="100%"
         height="540rem"
@@ -97,7 +98,7 @@ const SingleVideo = () => {
                 token ? addToLikes(findVideo) : navigate("/login")
               }
             >
-              <strong> Remove From Liked Videos</strong>
+              <strong className="remove-like"> Remove From Liked Videos</strong>
               <i style={{ color: "red" }} className="fas fa-heart"></i>
             </div>
           ) : (

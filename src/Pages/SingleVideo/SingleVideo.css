@@ -65,3 +65,73 @@
 .empty-playlist{
     padding: 0.5rem;
 }
+
+@media screen and (max-width:603px){
+   .playlist-mgmt {
+    font-size: 1.2rem;
+  }
+  .remove-liked-video, .liked-vide-div{
+    font-size: 1.2rem;
+
+  }
+
+  .playlist-view{
+    font-size: 1.2rem;
+  }
+
+  .watch-later ,.toggle-watch-later{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width:517px){
+  .playlist-mgmt {
+   font-size: 1rem;
+ }
+ .remove-liked-video, .liked-vide-div{
+   font-size: 1rem;
+
+ }
+ .playlist-view{
+  font-size: 1rem;
+}
+
+ .watch-later, .toggle-watch-later{
+   font-size: 1rem;
+ }
+}
+
+@media screen and (max-width:481px){
+  .playlist-mgmt {
+   font-size: 0.8rem;
+ }
+ .remove-liked-video, .liked-vide-div{
+   font-size: 0.8rem;
+
+ }
+ .playlist-view{
+  font-size: 0.8rem;
+}
+
+ .watch-later, .toggle-watch-later{
+   font-size: 0.8rem;
+ }
+}
+
+
+@media screen and (max-width:396px){
+  .playlist-mgmt {
+   font-size: 0.7rem;
+ }
+ .remove-liked-video, .liked-vide-div{
+   font-size: 0.7rem;
+
+ }
+ .playlist-view{
+  font-size: 0.7rem;
+}
+
+ .watch-later, .toggle-watch-later{
+   font-size: 0.7rem;
+ }
+}
