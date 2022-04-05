@@ -6,3 +6,4 @@ export {
 export { LikeProvider, useLike } from "./likedVideoContext";
 export { useWatchLater, WatchLaterProvider } from "./watchLaterContext";
 export { useHistory, HistoryProvider } from "./historyContext";
+export {usePlaylist,PlaylistProvider} from "./playlistContext";

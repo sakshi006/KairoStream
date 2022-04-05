@@ -1,0 +1,58 @@
+.playlist-grid{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.playlist-page{
+    margin: 2rem;
+}
+
+.playlist-header{
+    margin-top: 3rem;
+    font-size: 1.2rem;
+}
+
+.warn{
+    width: max-content;
+    margin: 1rem;
+}
+
+.playlist-container{
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+#playlist-card{
+    font-size: 1.5rem;
+    display: flex;justify-content: center;
+    align-items: center;
+}
+
+.playlist-link{
+    margin: 1rem;color: var(--font);
+    cursor: pointer;
+}
+
+.video-listing-page{
+    margin: auto 5rem;
+}
+
+.playlist-icon{
+    cursor: pointer;
+}
+.playlist-icon:hover{
+    color: var(--fav);
+}
+
+.playlist-delete{
+    color: var(--primary);
+    font-size: large;
+    margin-top: 0.3rem;
+    margin-left: 4rem;
+    cursor: pointer;
+}
+
+.playlist-delete:hover{
+    color: var(--fav);
+}

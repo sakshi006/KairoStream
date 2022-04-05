@@ -1,11 +1,12 @@
 import React from "react";
-import "./VideoCard.css";
-import { BsFillClockFill } from "react-icons/bs";
+import { usePlaylist } from "../../context";
+import { Link, useNavigate } from "react-router-dom";
+import { BsFillClockFill, BsFillTrashFill } from "react-icons/bs";
 import { AiOutlinePlayCircle } from "react-icons/ai";
-import { useLike,useWatchLater } from "../../context";
-import { useNavigate, Link } from "react-router-dom";
+import { useLike, useWatchLater } from "../../context";
 
-const VideoCard = ({ item }) => {
+export const PlaylistCard = ({ item, playlist }) => {
+  const { videoToPlayList } = usePlaylist();
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const { likeState, addToLikes } = useLike();
@@ -17,7 +18,6 @@ const VideoCard = ({ item }) => {
   const findItemInWatchLater = watchLater.watchLaterArray.find(
     (product) => product._id === item._id
   );
-
   return (
     <div className="cardcom background">
       <div className="card">
@@ -28,13 +28,11 @@ const VideoCard = ({ item }) => {
             <img className="card-image-one" src={item.thumbnail} alt="card" />
           </div>
         </Link>
-        <Link className="single-video-link" to={`/video/${item._id}`}>
           <article className="card-text-one">
             <figcaption>{item.title}</figcaption>
             <h5>{item.creator}</h5>
             <summary>Published on : {item.published}</summary>
           </article>
-        </Link>
         <footer>
           <span className="watch-later">
             {findItemInWatchLater ? (
@@ -71,11 +69,11 @@ const VideoCard = ({ item }) => {
                 className="fas fa-heart"
               ></i>
             )}
+             <BsFillTrashFill className="playlist-delete" onClick={() => videoToPlayList(item, playlist)} />
           </ul>
+         
         </footer>
       </div>
     </div>
   );
 };
-
-export default VideoCard;

@@ -1,31 +1,32 @@
-import { useContext,createContext, useState, useEffect } from "react";
-import axios from "axios"
+import { useContext, createContext, useState, useEffect } from "react";
+import axios from "axios";
 
 const VideoContext = createContext();
 
-const useVideoContext = () => useContext(VideoContext)
+const useVideoContext = () => useContext(VideoContext);
 
-const VideoContextProvider = ({children})=>{
+const VideoContextProvider = ({ children }) => {
+  const [allVideos, setAllVideos] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-    const [video,setVideo] = useState([]);
+  useEffect(() => {
+    (async () => {
+      setLoading(true);
+      try {
+        const response = await axios.get("/api/videos");
+        setAllVideos(response.data.videos);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
 
-    const getVideo = async()=>{
-        try{
-            const reponseFromServer = await axios.get("/api/videos");
-            setVideo(reponseFromServer.data.videos)
-        }catch(err){
-            console.error(err)
-        }
-    }
-    useEffect(()=>{
-        getVideo();
-    },[])
+  return (
+    <VideoContext.Provider value={{ allVideos, loading }}>
+      {children}
+    </VideoContext.Provider>
+  );
+};
 
-    return(
-        <VideoContext.Provider value = {{video,setVideo}}>
-            {children}
-        </VideoContext.Provider>
-    )
-}
-
-export {useVideoContext,VideoContextProvider} ;
+export { useVideoContext, VideoContextProvider };
