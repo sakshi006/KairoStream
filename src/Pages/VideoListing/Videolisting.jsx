@@ -10,9 +10,9 @@ import { useVideoContext } from '../../context/videoContext'
 const Videolisting = () => {
   const {videoState:{category,latest}} = useVideoFilterContext();
 
-  const {video} = useVideoContext()
+  const {allVideos} = useVideoContext()
 
-  const filteredVideoss = filterVideosByTag(video,category)
+  const filteredVideoss = filterVideosByTag(allVideos,category)
   const latestVideos = latestVideoFunction(filteredVideoss,latest)
 
 

@@ -5,7 +5,14 @@ import App from "./App";
 import { makeServer } from "./server";
 
 import { BrowserRouter } from "react-router-dom";
-import {VideoContextProvider,HistoryProvider,VideoFilterContextProvider,LikeProvider,WatchLaterProvider} from "./context"
+import {
+  VideoContextProvider,
+  HistoryProvider,
+  VideoFilterContextProvider,
+  LikeProvider,
+  WatchLaterProvider,
+  PlaylistProvider,
+} from "./context";
 
 // Call make Server
 makeServer();
@@ -15,13 +22,15 @@ ReactDOM.render(
     <BrowserRouter>
       <VideoContextProvider>
         <HistoryProvider>
-          <VideoFilterContextProvider>
-            <LikeProvider>
-              <WatchLaterProvider>
-                <App />
-              </WatchLaterProvider>
-            </LikeProvider>
-          </VideoFilterContextProvider>
+          <PlaylistProvider>
+            <VideoFilterContextProvider>
+              <LikeProvider>
+                <WatchLaterProvider>
+                  <App />
+                </WatchLaterProvider>
+              </LikeProvider>
+            </VideoFilterContextProvider>
+          </PlaylistProvider>
         </HistoryProvider>
       </VideoContextProvider>
     </BrowserRouter>
