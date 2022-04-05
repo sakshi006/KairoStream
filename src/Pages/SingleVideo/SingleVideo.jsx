@@ -31,6 +31,7 @@ const SingleVideo = () => {
     videoToPlayList,
   } = usePlaylist();
 
+
   
 
   const [modalVisible,setModalVisible] = useState(false)
@@ -39,11 +40,15 @@ const SingleVideo = () => {
 
   const findVideo = allVideos.find((item) => item._id === videoID);
   const findItemInLike = likeState.likes.find(
-    (product) => product._id === videoID
+    (product) => console.log(product,"product") || product._id === videoID
   );
+
+
   const findItemInWatchLater = watchLater.watchLaterArray.find(
     (product) => product._id === videoID
   );
+
+
 
 
 
@@ -57,7 +62,7 @@ const SingleVideo = () => {
         frameBorder="0"
         width="100%"
         height="540rem"
-        src={`https://www.youtube.com/embed/${findVideo._id}`}
+        src={`https://www.youtube.com/embed/${videoID}`}
         onInferredClick={() => token && addToHistory(findVideo)}
       ></Iframe>
       <footer>
